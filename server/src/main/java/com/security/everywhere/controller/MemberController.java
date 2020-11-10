@@ -27,6 +27,7 @@ public class MemberController {
 
     @PostMapping("/check/nickName")
     public String checkId(@RequestBody Member member) {
+        //닉네임이 이미 존재하는지 확인
         int already = memberRepository.countByNickName(member.getNickName());
 
         if (already != 0) {
@@ -36,6 +37,7 @@ public class MemberController {
         }
     }
 
+    //비밀번호가 규정에 맞는지 체크
     @PostMapping("/typeCheck/pw")
     public String passwordTypeChech(@RequestBody Member member) {
         boolean isPass = isPassed(member.getPw());
@@ -51,6 +53,7 @@ public class MemberController {
         }
     }
 
+    //아이디 생성
     @PostMapping("/create")
     public String create(@RequestBody Member member) {
         Member already = memberRepository.findByNickName(member.getNickName());
@@ -79,8 +82,10 @@ public class MemberController {
         }
     }
 
+    //비밀번호가 규정에 맞는지 체크하는 함수
     private boolean isPassed(String password) {
         boolean passed = true;     // 패턴 통과 여부
+        // 정규표현식 사용
         String pwPattern = "^(?=.*\\d)(?=.*[~`!@#$%\\^&*()-])(?=.*[a-z])(?=.*[A-Z]).{9,20}$";
         Matcher matcher = Pattern.compile(pwPattern).matcher(password);
 
