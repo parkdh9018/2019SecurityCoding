@@ -9,220 +9,22 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <!-- Material Design for Bootstrap CSS -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-
+    <!-- css-->
+    <link rel="stylesheet" href="mycss.css" type="text/css">
+    
     <!--jquery ui-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
 
-    <link th:href="@{css/jquery.range.css}" rel="stylesheet">
-    <script th:src="@{lib/jquery.range.js}"></script>
+
+    <!-- Jrange -->
+    <link href="http://nitinhayaran.github.io/jRange/jquery.range.css" rel="stylesheet"/>
+    <script src="http://nitinhayaran.github.io/jRange/jquery.range.js"></script>
 
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
-    <title>Hello, world!</title>
-    <style>
-        .bmd-layout-container{
-            width: 600px;
-            height: 1000px;
-        }
-        .search-query:focus + button {
-            z-index: 3;
-        }
-
-        .col-6 {
-            flex: 0 0 50%;
-            max-width: 50%;
-            width: 40%;
-            height: 250px;
-        }
-        .col-6 img{
-            width: 250px;
-            height: 200px;
-
-        }
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin-right: 0px;
-            margin-left: 0px;
-        }
-        .modal-body1 .row {
-            padding-top: 10px;
-        }
-
-        .form-control:focus {
-            box-shadow: none;
-        }
-        .form-control::placeholder {
-            font-size: 0.95rem;
-            color: #aaa;
-            font-style: italic;
-        }
-        .rounded {
-            border-radius: 42.125rem!important;
-        }
-
-        /*login_form*/
-        .form-control {
-            box-shadow: none;
-            border-color: #ddd;
-        }
-        .form-control:focus {
-            border-color: #4aba70;
-        }
-        .login-form {
-            width: 350px;
-            margin: 0 auto;
-            padding: 30px 0;
-        }
-        .login-form form {
-            color: #434343;
-            border-radius: 1px;
-            margin-bottom: 15px;
-            background: #fff;
-            border: 1px solid #f3f3f3;
-            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-            padding: 30px;
-        }
-        .login-form h4 {
-            text-align: center;
-            font-size: 22px;
-            margin-bottom: 20px;
-        }
-        .login-form .avatar {
-            color: #fff;
-            margin: 0 auto 30px;
-            text-align: center;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            z-index: 9;
-            background: #19aa8d;
-            padding: 15px;
-            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-        }
-        .login-form .avatar i {
-            font-size: 62px;
-        }
-        .login-form .form-group {
-            margin-bottom: 20px;
-        }
-        .login-form .form-control, .login-form .btn {
-            min-height: 40px;
-            border-radius: 2px;
-            transition: all 0.5s;
-        }
-        .login-form .close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-        }
-        .login-form .btn {
-            background: #19aa8d;
-            border: none;
-            line-height: normal;
-        }
-        .login-form .btn:hover, .login-form .btn:focus {
-            background: #19aa8d;
-        }
-        .login-form .checkbox-inline {
-            float: left;
-        }
-        .login-form input[type="checkbox"] {
-            margin-top: 2px;
-        }
-        .login-form .forgot-link {
-            float: right;
-        }
-        .login-form .small {
-            font-size: 13px;
-        }
-        .login-form a {
-            color: #19aa8d;
-        }
-
-        /*sign_up*/
-        .form-control, .form-control:focus, .input-group-addon {
-            border-color: #e1e1e1;
-            border-radius: 0;
-        }
-        .signup-form {
-            width: 390px;
-            margin: 0 auto;
-            padding: 30px 0;
-        }
-        .signup-form h2 {
-            color: #636363;
-            margin: 0 0 15px;
-            text-align: center;
-        }
-        .signup-form .lead {
-            font-size: 14px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .signup-form form {
-            border-radius: 1px;
-            margin-bottom: 15px;
-            background: #fff;
-            border: 1px solid #f3f3f3;
-            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-            padding: 30px;
-        }
-        .signup-form .form-group {
-            margin-bottom: 20px;
-        }
-        .signup-form label {
-            font-weight: normal;
-            font-size: 13px;
-        }
-        .signup-form .form-control {
-            min-height: 38px;
-            box-shadow: none !important;
-            border-width: 0 0 1px 0;
-        }
-        .signup-form .input-group-addon {
-            max-width: 42px;
-            text-align: center;
-            background: none;
-            border-width: 0 0 1px 0;
-            padding-left: 5px;
-        }
-        .signup-form .btn {
-            font-size: 16px;
-            font-weight: bold;
-            background: #19aa8d;
-            border-radius: 3px;
-            border: none;
-            min-width: 140px;
-            outline: none !important;
-        }
-        .signup-form .btn:hover, .signup-form .btn:focus {
-            background: #179b81;
-        }
-        .signup-form a {
-            color: #19aa8d;
-            text-decoration: none;
-        }
-        .signup-form a:hover {
-            text-decoration: underline;
-        }
-        .signup-form .fa {
-            font-size: 21px;
-        }
-        .signup-form .fa-paper-plane {
-            font-size: 17px;
-        }
-        .signup-form .fa-check {
-            color: #fff;
-            left: 9px;
-            top: 18px;
-            font-size: 7px;
-            position: absolute;
-        }
-
-    </style>
+    <title>축제좋아</title>
 </head>
 <body>
 <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay mx-auto">
@@ -531,11 +333,14 @@
 
     var scroll_category="main";
 
+    //날짜를 YYYYMMDD 형태로 바꾸어서 저장
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0');
     var yyyy = today.getFullYear();
     today = yyyy + mm + dd;
+
+    console.log(today)
 
     var startmonth;
     var endmonth;
@@ -585,7 +390,7 @@
         //$('.bmd-layout-drawer.bg-faded').attr('aria-hidden','true');
     }
 
-    //세부 지역 목록
+    //지역 선택을 위한 세부 지역 목록
     var area = Array(Array(),Array());
 
     area[0] = [];
@@ -711,7 +516,7 @@
     $body_height = $body_height_px.substring(0,$body_height_px.length-2);
 
 
-    var pagenum = 0;//0값이면 searchfestival에 의해 한번 출력되고 또됨 1이면        main인경우
+    var pagenum = 0;//페이지 번호를 저장하는 변수
     $('.bmd-layout-content').scroll(function() {
 
         //스크롤 내리면 축제 리스트 추가
@@ -719,6 +524,7 @@
 
             if (once == 0) {
 
+                //페이지 번호를 증가시킨 변수와 조건에 따라 다른 매개변수를 함수로 보냄
                 if(scroll_category == "main")
                     print_festivalList("main", ++pagenum, today);
                 else if(scroll_category == "search")
@@ -748,6 +554,8 @@
         str = XSS_Check(str);
         alert(str);
         scroll_category = "search";
+
+        //페이지 초기화를 하고 새로운 리스트 들을 화면에 띄움
         print_festivalList("search", 0, today, null, null, str);
     });
     $(document).on('click','#button-addon',function (){
@@ -755,13 +563,19 @@
         str = XSS_Check(str);
         alert(str);
         scroll_category = "search";
+
+        //페이지 초기화를 하고 새로운 리스트 들을 화면에 띄움
         print_festivalList("search", 0, today, null, null, str);
     });
 
+
+    //화면에 축제 리스트들을 출력하는 함수
     function print_festivalList(category, pagenum, date1, date2, address, title){
         var param = {"pageNo": pagenum,"numOfRows": "10","title" : title,
             "eventStartDate": date1, "eventEndDate": date2, "address" : address, "category" : category};
         scroll_category = category;
+
+        //ajax를 이용하여 컨트롤러로 부터 데이터 받아옴
         $.ajax({
             url: "/api/festivalInfo",
             type: "POST",
@@ -773,6 +587,8 @@
                 $('.list-unstyled.list-thumbs').children().remove();
 
             $appendData = $('<div class="row"></div>');
+
+            //받아온 축제 데이터들 리스트에 출력
             for(var i=0;i<data.length;i++) {
 
                 $festival_item = $('<li class="col-6">\n' +
